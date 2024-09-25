@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation'; // Importa useRouter de next/navigation
 
 const HomePage = () => {
   const router = useRouter();
