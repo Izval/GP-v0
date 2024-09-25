@@ -1,15 +1,18 @@
+"use client"; // Agregar la directiva para habilitar hooks en Client Components
+
 import { useState } from 'react';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation'; // Usar `next/navigation` en lugar de `next/router`
 
 const ProfileType = () => {
-  const [selectedType, setSelectedType] = useState(null);
+  const [selectedType, setSelectedType] = useState<string | null>(null); // Añadir tipado explícito para TypeScript
   const router = useRouter();
   const auth = getAuth();
   const db = getFirestore();
 
-  const handleSelect = async (type) => {
+  // Tipar explícitamente el parámetro 'type' como string
+  const handleSelect = async (type: string) => {
     setSelectedType(type);
     const user = auth.currentUser;
 

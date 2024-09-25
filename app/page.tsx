@@ -1,4 +1,6 @@
-import { useRouter } from 'next/navigation'; // Importa useRouter de next/navigation
+"use client"; // Agrega esto en la primera línea
+
+import { useRouter } from 'next/navigation';
 
 const HomePage = () => {
   const router = useRouter();
