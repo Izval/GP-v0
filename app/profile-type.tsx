@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { useRouter } from 'next/navigation'; // Usar `next/navigation` en lugar de `next/router`
-import { Card, CardContent } from "@/components/ui/card"
-import { UserCircle, Building2, PiggyBank, Cog } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"; // Uso del alias definido en tsconfig.json
+import { UserCircle, Building2, PiggyBank, Cog } from "lucide-react"; // Importar íconos desde lucide-react
 
 const ProfileType = () => {
   const [selectedType, setSelectedType] = useState<string | null>(null); // Añadir tipado explícito para TypeScript

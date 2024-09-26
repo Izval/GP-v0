@@ -18,8 +18,9 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Se asegura de que las rutas relativas sean correctas
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./app/*"] // Apunta a la carpeta 'app'
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
