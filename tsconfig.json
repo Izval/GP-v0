@@ -8,15 +8,15 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler", // Está bien si usas Webpack/Bundler
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".", // Esto está bien, asegura rutas relativas desde la raíz del proyecto
+    "baseUrl": ".", 
     "paths": {
-      "@/*": ["./app/*"], // Esto está bien si `app` es donde está tu mayor parte de código
-      "@/firebaseConfig": ["./firebaseConfig.ts"] // Esto apunta directamente a firebaseConfig en la raíz
+      "@/*": ["./app/*"],
+      "@/firebaseConfig": ["./firebaseConfig.ts"]
     },
     "plugins": [
       {
@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "firebaseConfig.ts" // Asegúrate de incluir firebaseConfig explícitamente si está fuera de app
+    "firebaseConfig.ts" 
   ],
   "exclude": ["node_modules"]
 }
