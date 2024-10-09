@@ -1,6 +1,6 @@
 // firebaseConfig.ts
 import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
 // Configuración de Firebase
 const firebaseConfig = {
@@ -13,8 +13,7 @@ const firebaseConfig = {
   measurementId: "G-PWPKZ7XGSR"
 };
 
-// Inicializar la aplicación Firebase
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
-
-// Inicializar Auth
 export const auth = getAuth(app);
+export const provider = new GoogleAuthProvider();
